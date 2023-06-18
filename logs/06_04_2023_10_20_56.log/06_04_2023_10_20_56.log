@@ -1,0 +1,40 @@
+[ 2023-06-04 10:20:57,473 ] 26 root - INFO - Data Ingestion methods Starts
+[ 2023-06-04 10:20:57,483 ] 29 root - INFO - Dataset read as pandas Dataframe
+[ 2023-06-04 10:20:57,502 ] 33 root - INFO - Train Test split
+[ 2023-06-04 10:20:57,519 ] 44 root - INFO - Ingestion of Data is completed
+[ 2023-06-04 10:20:57,541 ] 79 root - INFO - Read train and test data completed
+[ 2023-06-04 10:20:57,546 ] 80 root - INFO - Train Dataframe Head : 
+   Gender        Age    Height      Weight family_history_with_overweight FAVC      FCVC  NCP       CAEC SMOKE      CH2O  SCC       FAF       TUE       CALC                 MTRANS           NObeyesdad
+0  Female  25.982113  1.627818  105.428628                            yes  yes  3.000000  3.0  Sometimes    no  1.480750   no  0.098043  0.663492  Sometimes  Public_Transportation     Obesity_Type_III
+1  Female  26.000000  1.656320  111.933010                            yes  yes  3.000000  3.0  Sometimes    no  2.774014   no  0.000000  0.138418  Sometimes  Public_Transportation     Obesity_Type_III
+2    Male  18.000000  1.750097   86.372141                            yes  yes  2.907062  3.0  Sometimes    no  2.740848   no  1.219827  0.037634  Sometimes  Public_Transportation  Overweight_Level_II
+3  Female  22.000000  1.700000   66.000000                            yes   no  3.000000  3.0     Always    no  2.000000  yes  2.000000  1.000000  Sometimes  Public_Transportation        Normal_Weight
+4    Male  23.451595  1.670227   75.000000                            yes  yes  2.000000  3.0  Sometimes    no  2.000000   no  0.129163  1.983678  Sometimes  Public_Transportation   Overweight_Level_I
+[ 2023-06-04 10:20:57,550 ] 81 root - INFO - Test Dataframe Head  : 
+   Gender        Age    Height      Weight family_history_with_overweight FAVC  FCVC       NCP        CAEC SMOKE      CH2O  SCC       FAF       TUE       CALC                 MTRANS           NObeyesdad
+0  Female  20.406871  1.755978   53.699561                            yes  yes   2.0  3.891994  Frequently    no  1.863930   no  2.870127  2.000000         no  Public_Transportation  Insufficient_Weight
+1  Female  26.000000  1.624950  111.004920                            yes  yes   3.0  3.000000   Sometimes    no  2.704315   no  0.000000  0.322666  Sometimes  Public_Transportation     Obesity_Type_III
+2    Male  18.000000  1.850000   60.000000                            yes  yes   3.0  4.000000   Sometimes    no  2.000000  yes  2.000000  0.000000  Sometimes             Automobile  Insufficient_Weight
+3  Female  21.000000  1.520000   42.000000                             no  yes   3.0  1.000000  Frequently    no  1.000000   no  0.000000  0.000000  Sometimes  Public_Transportation  Insufficient_Weight
+4    Male  22.000000  1.750000   74.000000                            yes   no   2.0  3.000000   Sometimes    no  2.000000   no  1.000000  2.000000  Sometimes                   Bike        Normal_Weight
+[ 2023-06-04 10:20:57,550 ] 83 root - INFO - Obtaining preprocessing object
+[ 2023-06-04 10:20:57,550 ] 26 root - INFO - Data Transformation initiated
+[ 2023-06-04 10:20:57,550 ] 37 root - INFO - Pipeline Initiated
+[ 2023-06-04 10:20:57,570 ] 104 root - INFO - Applying preprocessing object on training and testing datasets.
+[ 2023-06-04 10:20:57,571 ] 116 root - INFO - Preprocessor pickle file saved
+[ 2023-06-04 10:20:57,571 ] 31 root - INFO - Splitting Dependent and Independent variables from train and test data
+[ 2023-06-04 10:20:57,840 ] 48 root - INFO - Model Report :               precision    recall  f1-score   support
+
+         0.0       0.64      0.91      0.75        86
+         1.0       0.68      0.37      0.48        93
+         2.0       0.59      0.36      0.45        88
+         3.0       0.59      0.38      0.46        79
+         4.0       0.45      0.59      0.51       102
+         5.0       0.70      0.94      0.80        88
+         6.0       0.93      0.99      0.96        98
+
+    accuracy                           0.65       634
+   macro avg       0.65      0.65      0.63       634
+weighted avg       0.66      0.65      0.63       634
+
+[ 2023-06-04 10:20:57,841 ] 66 root - INFO - Exception occured at Model Training
